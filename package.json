@@ -1,0 +1,24 @@
+{
+  "name": "coinbase-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node -r dotenv/config server",
+    "dev": "nodemon -r dotenv/config server",
+    "docker:start": "./scripts/docker_start.sh",
+    "docker:stop": "./scripts/docker_stop.sh"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "coinbase-commerce-node": "^1.0.4",
+    "dotenv": "^10.0.0",
+    "fastify": "^3.19.1",
+    "fastify-swagger": "^4.8.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}

@@ -1,0 +1,19 @@
+### checkoutList
+GET http://localhost:3000/coinbase/checkout/list HTTP/1.1
+
+### checkoutAll
+GET http://localhost:3000/coinbase/checkout/all HTTP/1.1
+
+### checkoutCreate
+POST http://localhost:3000/coinbase/checkout/create HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "The Sovereign Individual",
+    "description": "Mastering the Transition to the Information Age",
+    "pricing_type": "no_price",
+    "requested_info": []
+}
+
+### checkoutDelete
+DELETE http://localhost:3000/coinbase/checkout/delete/7b4ef310-f520-48d5-a880-1156998160a2 HTTP/1.1

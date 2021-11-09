@@ -1,0 +1,5 @@
+### eventList
+GET http://localhost:3000/coinbase/event/list HTTP/1.1
+
+### eventAll
+GET http://localhost:3000/coinbase/event/all HTTP/1.1

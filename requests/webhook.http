@@ -1,0 +1,2 @@
+### webhookVerify
+POST http://localhost:3000/coinbase/webhook/verify HTTP/1.1
