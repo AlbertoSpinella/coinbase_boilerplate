@@ -26,7 +26,7 @@ jobs:
         id: build-image
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-          ECR_REPOSITORY: coinbase_webhook
+          ECR_REPOSITORY: coinbase_boilerplate
           IMAGE_TAG: latest
         run: |
           # Build a docker container and push it to ECR
