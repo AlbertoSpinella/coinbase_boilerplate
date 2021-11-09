@@ -22,4 +22,15 @@ app.register(coinbasePlugin, {
     prefix: "/coinbase"
 });
 
+app.register((fastify, options, done) => {
+    try {
+        fastify.get("/", {}, (req, res) => {
+            res.send("Hello world!");
+        });
+        done();
+    } catch (error) {
+        throw error;
+    }
+});
+
 export default app;
