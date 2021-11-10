@@ -4,13 +4,16 @@ GET http://localhost:3000/coinbase/charge/list HTTP/1.1
 ### chargeAll
 GET http://localhost:3000/coinbase/charge/all HTTP/1.1
 
+### chargeAllCompleted
+GET http://localhost:3000/coinbase/charge/allCompleted HTTP/1.1
+
 ### chargeCreate
 POST http://localhost:3000/coinbase/charge/create HTTP/1.1
 Content-Type: application/application/json
 
 {
-    "name": "First payment attempt",
-    "description": "First payment attempt by Efebia",
+    "name": "Second payment attempt",
+    "description": "Second payment attempt by Efebia",
     "local_price": {
         "amount": "5.00",
         "currency": "USD"

@@ -81,6 +81,24 @@ export const chargeAll = async () => {
     }
 };
 
+export const chargeAllCompleted = async () => {
+    try {
+        console.log("Charge All Completed...");
+        const res = await Charge.all({}, (error, list) => {
+            // if  (error) throw error;
+        });
+        const result = [];
+        res.forEach(el => {
+            if (el.payments.length != 0) {
+                result.push({name: el.name, code: el.code, payments: el.payments});
+            }
+        });
+        return result;
+    } catch (err) {
+        throw err;
+    }
+};
+
 export const chargeCreate = async (chargeData) => {
     try {
         console.log("Charge Create...");

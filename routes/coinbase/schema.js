@@ -5,6 +5,7 @@ import {
     coinbaseCheckoutDelete,
     coinbaseChargeList,
     coinbaseChargeAll,
+    coinbaseChargeAllCompleted,
     coinbaseChargeCreate,
     coinbaseEventList,
     coinbaseEventAll,
@@ -64,6 +65,13 @@ export const coinbaseChargeAllOpts = {
     handler: coinbaseChargeAll
 };
 
+export const coinbaseChargeAllCompletedOpts = {
+    schema: {
+        tags: ['Charge']
+    },
+    handler: coinbaseChargeAllCompleted
+};
+
 export const coinbaseChargeCreateOpts = {
     schema: {
         tags: ['Charge'],
@@ -93,6 +101,9 @@ export const coinbaseEventAllOpts = {
 };
 
 export const coinbaseWebhookVerifyOpts = {
+    config: {
+        rawBody: true
+    },
     schema: {
         tags: ['Webhook']
     },

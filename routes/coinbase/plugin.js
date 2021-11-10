@@ -5,6 +5,7 @@ import {
     coinbaseCheckoutDeleteOpts,
     coinbaseChargeListOpts,
     coinbaseChargeAllOpts,
+    coinbaseChargeAllCompletedOpts,
     coinbaseChargeCreateOpts,
     coinbaseEventListOpts,
     coinbaseEventAllOpts,
@@ -20,6 +21,7 @@ export const coinbasePlugin = (fastify, options, done) => {
 
         fastify.get("/charge/list", coinbaseChargeListOpts);
         fastify.get("/charge/all", coinbaseChargeAllOpts);
+        fastify.get("/charge/allCompleted", coinbaseChargeAllCompletedOpts);
         fastify.post("/charge/create", coinbaseChargeCreateOpts);
 
         fastify.get("/event/list", coinbaseEventListOpts);

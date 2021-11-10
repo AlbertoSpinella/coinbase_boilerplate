@@ -5,6 +5,7 @@ import {
     checkoutDelete,
     chargeList,
     chargeAll,
+    chargeAllCompleted,
     chargeCreate,
     eventAll,
     webhookVerify
@@ -61,6 +62,15 @@ export const coinbaseChargeList = async (req, res) => {
 export const coinbaseChargeAll = async (req, res) => {
     try {
         const result = await chargeAll();
+        return res.send(result);
+    } catch (err) {
+        throw err;
+    }
+};
+
+export const coinbaseChargeAllCompleted = async (req, res) => {
+    try {
+        const result = await chargeAllCompleted();
         return res.send(result);
     } catch (err) {
         throw err;
